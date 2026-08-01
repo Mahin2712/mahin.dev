@@ -1,101 +1,217 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="dark scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mahin Abdullah | Developer & Tech Enthusiast</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Mahin Abdullah | Developer & Tinkerer</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%2309090b'/%3E%3Cpath d='M25 70V30L50 52L75 30V70' stroke='%2310b981' stroke-width='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  
   <style>
     body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #09090b;
     }
-    code, pre {
-      font-family: 'JetBrains Mono', monospace;
-    }
+    h1, h2, h3 { text-wrap: balance; }
+    p { text-wrap: pretty; }
   </style>
 </head>
-<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between selection:bg-indigo-500 selection:text-white">
+<body class="text-zinc-100 min-h-screen flex flex-col justify-between selection:bg-zinc-800 selection:text-emerald-400 antialiased">
 
-  <!-- Background Ambient Glow -->
+  <!-- Ambient Glow -->
   <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
-    <div class="absolute -top-40 -left-40 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl"></div>
-    <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl"></div>
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-emerald-500/[0.04] blur-[120px] rounded-full"></div>
   </div>
 
-  <!-- Main Container -->
-  <main class="max-w-3xl mx-auto px-6 py-20 w-full flex-grow flex flex-col justify-center">
-    
-    <!-- Header Badge -->
-    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 w-fit mb-6 text-xs text-slate-400">
-      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-      <span>Building & Exploring Tech</span>
+  <!-- Header / Navigation -->
+  <header class="max-w-5xl mx-auto px-6 sm:px-10 pt-10 w-full flex items-center justify-between">
+    <a href="#" class="flex items-center gap-3 group">
+      <div class="w-9 h-9 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center group-hover:border-zinc-700 transition duration-300">
+        <svg class="w-5 h-5 text-zinc-100 group-hover:text-emerald-400 transition duration-300" viewBox="0 0 100 100" fill="none">
+          <path d="M25 70V30L50 52L75 30V70" stroke="currentColor" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="50" cy="28" r="5" fill="#10b981"/>
+        </svg>
+      </div>
+      <span class="font-mono text-sm font-semibold text-zinc-400 group-hover:text-zinc-200 transition">mahin.dev.bd</span>
+    </a>
+
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900/60 border border-zinc-800/80 text-xs text-zinc-400">
+      <span class="relative flex h-2 w-2">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+      </span>
+      <span class="font-mono text-[11px] tracking-wider uppercase text-zinc-400">building & vibe coding</span>
     </div>
+  </header>
 
-    <!-- Hero Title -->
-    <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-4 text-slate-100">
-      Mahin Abdullah
-    </h1>
+  <!-- Main Content Container -->
+  <main class="max-w-5xl mx-auto px-6 sm:px-10 py-12 w-full flex-grow flex flex-col gap-12">
     
-    <!-- Subtitle / Domain handle -->
-    <p class="text-lg text-indigo-400 font-mono mb-6">
-      @mahin.dev.bd
-    </p>
+    <!-- Hero / Intro -->
+    <div class="space-y-4">
+      <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-zinc-100">
+        Mahin Abdullah
+      </h1>
+      <p class="text-zinc-400 text-lg sm:text-xl leading-relaxed max-w-3xl">
+        High school developer passionate about math, science, and building modern software. I write code in C, Python, and Node.js, and love rapid web development & vibe coding.
+      </p>
 
-    <!-- Bio Statement -->
-    <p class="text-slate-300 text-base sm:text-lg leading-relaxed mb-10">
-      Full-stack developer, IoT experimenter, and competitive programmer. Passionate about building modern web software, micro-controller hardware applications, and AI integrations.
-    </p>
-
-    <!-- Focus Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
-      <!-- Card 1 -->
-      <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800/80 hover:border-slate-700 transition">
-        <div class="text-indigo-400 text-xl mb-2">⚡</div>
-        <h2 class="font-semibold text-slate-200 mb-1">Software Dev</h2>
-        <p class="text-xs text-slate-400 leading-normal">
-          Building responsive web apps with React, Node.js, and modern CSS tooling.
-        </p>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800/80 hover:border-slate-700 transition">
-        <div class="text-indigo-400 text-xl mb-2">🤖</div>
-        <h2 class="font-semibold text-slate-200 mb-1">Hardware & IoT</h2>
-        <p class="text-xs text-slate-400 leading-normal">
-          Prototyping automated hardware systems with ESP32 and Arduino boards.
-        </p>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800/80 hover:border-slate-700 transition">
-        <div class="text-indigo-400 text-xl mb-2">🧠</div>
-        <h2 class="font-semibold text-slate-200 mb-1">Algorithms & AI</h2>
-        <p class="text-xs text-slate-400 leading-normal">
-          Solving logic challenges, Olympiad math, and implementing modern AI tools.
-        </p>
+      <!-- Skills Tags -->
+      <div class="flex flex-wrap gap-2 pt-2">
+        <span class="font-mono text-xs px-3 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-emerald-400">C</span>
+        <span class="font-mono text-xs px-3 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-emerald-400">Python</span>
+        <span class="font-mono text-xs px-3 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-emerald-400">Node.js</span>
+        <span class="font-mono text-xs px-3 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-emerald-400">Web Development</span>
+        <span class="font-mono text-xs px-3 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-emerald-400">Vibe Coding ⚡</span>
       </div>
     </div>
 
-    <!-- Contact & Links -->
+    <!-- Featured Project & Interests Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <!-- Featured Project Card (Spans 2 columns) -->
+      <a href="https://movielog2.netlify.app" target="_blank" rel="noreferrer" 
+         class="md:col-span-2 p-6 rounded-2xl bg-zinc-900/40 border border-zinc-800/80 hover:border-emerald-500/40 hover:bg-zinc-900/80 transition-all duration-300 group flex flex-col justify-between gap-6">
+        <div class="space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="font-mono text-xs text-emerald-400 font-medium">// FEATURED PROJECT</span>
+            <svg class="w-4 h-4 text-zinc-500 group-hover:text-emerald-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/>
+            </svg>
+          </div>
+          <h2 class="text-xl font-bold text-zinc-100 group-hover:text-emerald-300 transition">
+            Movie & Shows Tracker (Movie-Log v2)
+          </h2>
+          <p class="text-zinc-400 text-sm leading-relaxed">
+            A web application for tracking movies, TV shows, and managing your personal watch history. Features curated libraries, watchlist tracking, and custom insights.
+          </p>
+        </div>
+        <div class="font-mono text-xs text-zinc-500 flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <span>movielog2.netlify.app</span>
+        </div>
+      </a>
+
+      <!-- Interests Card (Spans 1 column) -->
+      <div class="p-6 rounded-2xl bg-zinc-900/40 border border-zinc-800/80 flex flex-col justify-between gap-4">
+        <div class="space-y-3">
+          <span class="font-mono text-xs text-zinc-500">// INTERESTS & PASSIONS</span>
+          <h2 class="text-lg font-semibold text-zinc-200">What I Love</h2>
+          <ul class="text-sm text-zinc-400 space-y-2">
+            <li class="flex items-center gap-2">
+              <span class="text-emerald-400">▹</span> Math & Olympiad Logic
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-emerald-400">▹</span> Science & Tech
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-emerald-400">▹</span> Software Exploration
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-emerald-400">▹</span> Competitive Problem Solving
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Windows Terminal Component -->
+    <section class="rounded-xl border border-zinc-800 bg-[#0c0c0e] overflow-hidden font-mono text-xs shadow-2xl">
+      <!-- Windows Terminal Title Bar -->
+      <div class="flex items-center justify-between px-3 py-2 bg-[#18181b] border-b border-zinc-800 select-none">
+        <!-- Windows Terminal Tab -->
+        <div class="flex items-center gap-2 px-3 py-1 rounded-t-md bg-[#0c0c0e] border-t border-x border-zinc-700/60 text-zinc-300 text-[11px]">
+          <svg class="w-3.5 h-3.5 text-blue-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+          </svg>
+          <span>PowerShell - Mahin Profile</span>
+        </div>
+
+        <!-- Windows Control Buttons (Minimize, Maximize, Close) -->
+        <div class="flex items-center gap-3 text-zinc-500 pr-1">
+          <span class="hover:text-zinc-200 cursor-pointer">―</span>
+          <span class="hover:text-zinc-200 cursor-pointer">▢</span>
+          <span class="hover:text-red-400 cursor-pointer">✕</span>
+        </div>
+      </div>
+
+      <!-- Terminal Body -->
+      <div class="p-5 space-y-4 text-zinc-300 leading-relaxed">
+        <div>
+          <span class="text-blue-400 font-semibold">PS C:\Users\Mahin&gt;</span> <span class="text-zinc-100">Get-Profile -Verbose</span>
+        </div>
+
+        <div class="pl-2 border-l-2 border-emerald-500/60 space-y-1 text-zinc-400">
+          <p><span class="text-zinc-500">Name       :</span> <span class="text-zinc-200 font-semibold">Mahin Abdullah</span></p>
+          <p><span class="text-zinc-500">School     :</span> <span class="text-zinc-300">Pabna Zilla School</span></p>
+          <p><span class="text-zinc-500">Batch      :</span> <span class="text-emerald-400 font-medium">SSC-27 Batch</span></p>
+          <p><span class="text-zinc-500">Location   :</span> <span class="text-zinc-300">Pabna, Bangladesh</span></p>
+          <p><span class="text-zinc-500">Contact    :</span> <a href="mailto:hi@me7.bd" class="text-emerald-400 hover:underline">hi@me7.bd</a></p>
+        </div>
+
+        <div class="pt-1 flex items-center gap-1">
+          <span class="text-blue-400 font-semibold">PS C:\Users\Mahin&gt;</span>
+          <span class="w-2 h-4 bg-zinc-200 animate-pulse"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Actions / Links -->
     <div class="flex flex-wrap items-center gap-4">
-      <a href="mailto:mahin@me7.bd" 
-         class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-sm transition shadow-lg shadow-indigo-600/20">
-        Get in Touch
+      <a href="mailto:hi@me7.bd" 
+         class="px-5 py-2.5 rounded-lg bg-zinc-100 hover:bg-white text-zinc-950 font-semibold text-sm transition flex items-center gap-2">
+        <span>Get in touch</span>
+        <svg class="w-4 h-4 text-zinc-950" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+        </svg>
       </a>
-      <a href="https://github.com" target="_blank" 
-         class="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 font-medium text-sm border border-slate-800 transition">
-        GitHub
+      <a href="https://github.com/Mahin2712" target="_blank" rel="noreferrer"
+         class="px-5 py-2.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-300 font-semibold text-sm border border-zinc-800 transition flex items-center gap-2">
+        <span>GitHub</span>
       </a>
     </div>
+
   </main>
 
   <!-- Footer -->
-  <footer class="max-w-3xl mx-auto px-6 py-6 w-full text-xs text-slate-500 flex justify-between items-center border-t border-slate-900">
-    <p>© 2026 Mahin Abdullah</p>
-    <p class="font-mono">me7.bd | mahin.dev.bd</p>
+  <footer class="max-w-5xl mx-auto px-6 sm:px-10 py-8 w-full border-t border-zinc-800/40 flex flex-col sm:flex-row justify-between items-center gap-4 font-mono text-xs text-zinc-500">
+    <div class="flex items-center gap-2">
+      <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+      <p>© 2026 Mahin Abdullah</p>
+    </div>
+    
+    <!-- Redirect Buttons -->
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-zinc-600 text-[10px] uppercase tracking-wider font-semibold">Redirects:</span>
+      <a href="https://me7.bd" class="px-2.5 py-1 rounded bg-zinc-900 border border-zinc-800 hover:border-zinc-700 text-zinc-400 hover:text-zinc-200 transition">
+        me7.bd ↗
+      </a>
+      <a href="https://মাহিন.বাংলা" class="px-2.5 py-1 rounded bg-zinc-900 border border-zinc-800 hover:border-zinc-700 text-zinc-400 hover:text-zinc-200 transition">
+        মাহিন.বাংলা ↗
+      </a>
+    </div>
   </footer>
 
 </body>
